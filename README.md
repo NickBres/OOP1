@@ -81,6 +81,7 @@ Clone the repo
 
 
 To run the project open it in IDEA, enter to pom.xml file and rebuild it. After project was built you can run its tests using Maven tool.
+
 <img width="417" alt="image" src="https://user-images.githubusercontent.com/70432147/208905750-850f563c-2127-43f2-8d7f-b4f01c1373c1.png">
 
 
