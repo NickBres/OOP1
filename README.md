@@ -36,8 +36,8 @@ It can undo next functions:
 * replace
 * reverse
 
-UndoableStringBuilder saves data in original StringBuilder and all commands that been made in Stack. Every time a change is made on string it saves its undoCommand in stack. When the user whants to undo it just takes last undoCommand from stak and applies it.
-To perform an undo command it uses original StringBuilder commands. For example to undo a reverse we just need to reverse it again. If we wand to undo an append we just need to delete whats been appended.
+UndoableStringBuilder saves data in regular StringBuilder and all commands that been made in Stack. Every time a change is made on string it saves its undoCommand in stack. When the user whants to undo it just takes last undoCommand from stak and applies it.
+To perform an undo command it uses regular StringBuilder commands. For example to undo a reverse we just need to reverse it again. If we wand to undo an append we just need to delete whats been appended.
 
 You can find the UndoableStringBuilder classes in [this](https://github.com/NickBres/OOP0) repository.
 
