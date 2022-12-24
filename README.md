@@ -58,8 +58,9 @@ ConcreteMember class implemets the Sender interface.
 It saves list of Members and original UndoableStringBuilder object.
 GroupAdmin can manage members and make changes in UndoableStringBuilder.
 If any changes are made to the UndoableStringBuilder, it will notify the members and sends them a new shallow copy.
+If member deleted it will also free its data.
 
-<img width="676" alt="image" src="https://user-images.githubusercontent.com/70432147/208913193-66d03463-85c6-4c32-81f9-60d6664c91c9.png">
+![image](https://user-images.githubusercontent.com/70432147/209438558-effe8cec-1def-48f1-9647-333f78c0c4d2.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
