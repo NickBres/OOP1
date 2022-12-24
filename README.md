@@ -5,7 +5,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project contains an Observer design pattern over String Builder wrap with undo function. Also, It contains tests for UndoableStringBuilder and memory tests for Observer.
+UndoableStringBuilder class extends the regular StringBuilder class(Java) implementing the UNDO function, also it may notify its subscribers about changes that were done.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
