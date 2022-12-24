@@ -7,7 +7,7 @@ public class ConcreteMember implements Member {
     private String name; // member name
 
     public ConcreteMember(UndoableStringBuilder undoableStringBuilder,String name) {
-        this.undoableStringBuilder = new UndoableStringBuilder(undoableStringBuilder);
+        this.undoableStringBuilder = new UndoableStringBuilder(undoableStringBuilder); // copy of UndoableStringBuilder
         this.name = name;
     }
 

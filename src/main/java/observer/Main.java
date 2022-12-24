@@ -7,8 +7,6 @@ public class Main {
         groupAdmin.appendString(" World");
         groupAdmin.appendString("!");
 
-        System.out.println("Current string : \n" + groupAdmin.undoableStringBuilder);
-
         groupAdmin.addMember("John");
         groupAdmin.addMember("Mary");
 
