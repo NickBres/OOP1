@@ -27,7 +27,7 @@ This project contains an Observer design pattern over String Builder wrap with u
 
 ### Undoable String Builder
 
-UndoableStringBuilder is a wrapper class for the original StringBuilder class in java with undo function.
+UndoableStringBuilder is a extends the regular StringBuilder with undo function,implementing regular StringBuilder.
 
 It can undo next functions:
 * append
