@@ -18,6 +18,13 @@ public class ConcreteMember implements Member {
     public String getName() {
         return this.name;
     }
+    /**
+     * Method to free resources
+     */
+    public void free(){
+        this.undoableStringBuilder = null;
+        this.name = null;
+    }
 
     /**
      * Notify the member that the undoableStringBuilder has changed

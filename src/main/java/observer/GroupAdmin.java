@@ -45,10 +45,13 @@ public class GroupAdmin implements Sender{
         for (ConcreteMember member : members) {
             if (member.getName().equals(name)) {
                 members.remove(member);
+                member.free();
                 break;
             }
         }
     }
+
+
 
     @Override
     public void notifyMembers() {
