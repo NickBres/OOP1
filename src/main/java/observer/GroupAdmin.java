@@ -89,7 +89,6 @@ public class GroupAdmin implements Sender{
     @Override
     public void notifyMembers() {
         for (ConcreteMember member : this.members) {
-            member.setUndoableStringBuilder(this.undoableStringBuilder); // update UndoableStringBuilder copy
             member.handleEvent(); // notify member
         }
     }

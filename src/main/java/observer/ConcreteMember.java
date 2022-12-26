@@ -3,16 +3,12 @@ package observer;
 import UndoableStringBuilder.*;
 public class ConcreteMember implements Member {
 
-    private UndoableStringBuilder undoableStringBuilder;    // copy of extended StringBuilder
+    private UndoableStringBuilder undoableStringBuilder;    // shallow copy of extended StringBuilder
     private String name; // member name
 
     public ConcreteMember(UndoableStringBuilder undoableStringBuilder,String name) {
-        this.undoableStringBuilder = new UndoableStringBuilder(undoableStringBuilder); // copy of UndoableStringBuilder
+        this.undoableStringBuilder = undoableStringBuilder; // shallow copy of UndoableStringBuilder
         this.name = name;
-    }
-
-    public void setUndoableStringBuilder(UndoableStringBuilder usb) {
-        this.undoableStringBuilder = new UndoableStringBuilder(usb);
     }
 
     public String getName() {
