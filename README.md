@@ -5,7 +5,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project contains an Observer design pattern over String Builder wrap with undo function. Also It contains tests for UndoableStringBuilder and memory tests for Observer.
+UndoableStringBuilder class extends the regular StringBuilder class(Java) implementing the UNDO function, also it may notify its subscribers about changes that were done.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -27,7 +27,7 @@ This project contains an Observer design pattern over String Builder wrap with u
 
 ### Undoable String Builder
 
-UndoableStringBuilder is a wrapper class for the original StringBuilder class in java with undo function.
+UndoableStringBuilder extends the regular StringBuilder with undo function.
 
 It can undo next functions:
 * append
@@ -36,8 +36,7 @@ It can undo next functions:
 * replace
 * reverse
 
-UndoableStringBuilder saves data in original StringBuilder and all commands that been made in Stack. Every time a change is made on string it saves its undoCommand in stack. When the user whants to undo it just takes last undoCommand from stak and applies it.
-To perform an undo command it uses original StringBuilder commands. For example to undo a reverse we just need to reverse it again. If we wand to undo an append we just need to delete whats been appended.
+UndoableStringBuilder saves data in regular StringBuilder and all commands that have been made in Stack. Every time a change is made on the string it saves its undoCommand in the stack. When the user wants to undo it just takes the last undoCommand from the stack and applies it. To perform an undo command it uses regular StringBuilder commands. For example to undo a reverse we just need to reverse it again. If we want to undo an append we just need to delete what’s been appended.
 
 You can find the UndoableStringBuilder classes in [this](https://github.com/NickBres/OOP0) repository.
 
@@ -48,17 +47,17 @@ You can find the UndoableStringBuilder classes in [this](https://github.com/Nick
 
 ### Observer
 
-This project uses simple Observer design pattern.
+This project uses a simple Observer design pattern.
 #### ConcreteMember
-ConcreteMember class implemets the Member interface.
-Every member have its name (String) and UndoableStringBuilder shallow copy.
-It uses HandleEvent function to inform the member about changes that been made in UndoableStringBuilder.
+ConcreteMember class implements the Member interface.
+Every member has its name (String) and UndoableStringBuilder shallow copy.
+It uses the HandleEvent function to inform the member about changes that have been made in UndoableStringBuilder.
 #### GroupAdmin
-ConcreteMember class implemets the Sender interface. 
-It saves list of Members and original UndoableStringBuilder object.
+ConcreteMember class implements the Sender interface. 
+It saves a list of Members and the original UndoableStringBuilder object.
 GroupAdmin can manage members and make changes in UndoableStringBuilder.
 If any changes are made to the UndoableStringBuilder, it will notify the members and sends them a new shallow copy.
-If member deleted it will also free its data.
+If a member is deleted it will also free its data.
 
 ![image](https://user-images.githubusercontent.com/70432147/209438558-effe8cec-1def-48f1-9647-333f78c0c4d2.png)
 
@@ -66,8 +65,8 @@ If member deleted it will also free its data.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Tests
-There is a simple main function that can show how program works. 
-All other test are made using JUnit tool.
+There is a simple main function that can show how the program works. 
+All other tests are made using the JUnit tool.
 * UndoableStringBuilderTest - Checks every function in UndoableStringBuilder
 * Tests - Checks observer using JVMUtilities to show memory usage after every change has been made
 <img width="706" alt="image" src="https://user-images.githubusercontent.com/70432147/208913571-622851f2-48ad-42c7-9ad1-1451b9713311.png">
@@ -83,7 +82,7 @@ Clone the repo
    ```
 
 
-To run the project, open it in the IntelliJ IDEA editor, enter to pom.xml file and rebuild it. After project was built you can run its tests using Maven tool.
+To run the project, open it in the IntelliJ IDEA editor, enter to pom.xml file and rebuild it. After the project was built you can run its tests using the Maven tool.
 
 <img width="417" alt="image" src="https://user-images.githubusercontent.com/70432147/208905750-850f563c-2127-43f2-8d7f-b4f01c1373c1.png">
 
