@@ -29,7 +29,7 @@ public class UndoableStringBuilderTest   {
     }
 
     @Test
-    public void test1(){
+    public void test1(){ // used this test to understand how to use the JVM utilities
         logger.info(()->JvmUtilities.objectFootprint(usb));
         usb.append(" world!");
         logger.info(()->JvmUtilities.objectFootprint(usb));
